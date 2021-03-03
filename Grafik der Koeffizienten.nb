@@ -1,0 +1,1277 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     43347,       1268]
+NotebookOptionsPosition[     42048,       1220]
+NotebookOutlinePosition[     42387,       1235]
+CellTagsIndexPosition[     42344,       1232]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"k", "[", 
+     RowBox[{"d_", ",", "i_"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "d"], 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "I"}], ")"}]}], "+", 
+     RowBox[{
+      FractionBox[
+       SqrtBox["2"], "d"], 
+      RowBox[{"Exp", "[", 
+       RowBox[{"2", "\[Pi]", " ", "I", 
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["7", "8"], "+", 
+          FractionBox["i", "d"]}], ")"}]}], "]"}]}]}]}], "\n", 
+   RowBox[{
+    RowBox[{"T3", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "[", 
+        RowBox[{"3", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"3", ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"3", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"3", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"3", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"T4", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"4", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"T5", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"5", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"T6", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "3"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"6", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"T7", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"7", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"T8", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "1"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "3"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "1"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "0"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "1"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "2"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "3"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", "4"}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "3"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "2"}]}], "]"}], ",", 
+       RowBox[{"k", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"-", "1"}]}], "]"}]}], "}"}]}], ";"}], "\n", 
+   RowBox[{
+    RowBox[{"complexSplit", "=", 
+     RowBox[{"Function", "[", 
+      RowBox[{"z", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Re", "@", "z"}], ",", 
+         RowBox[{"Im", "@", "z"}]}], "}"}], ",", "Listable"}], "]"}]}], ";"}],
+    "\n", 
+   RowBox[{
+    RowBox[{"ComplexPlot", "[", 
+     RowBox[{"list_", ",", "d_"}], "]"}], ":=", 
+    RowBox[{"ListPlot", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"complexSplit", "@", "list"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"AxesOrigin", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"PlotRange", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1.2"}], ",", "1.2"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1.2"}], ",", "1.2"}], "}"}]}], "}"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"ImagePadding", "\[Rule]", "40"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"Frame", "\[Rule]", "True"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"FrameLabel", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Im", ",", "None"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Re", ",", "\"\<complex plane\>\""}], "}"}]}], "}"}]}], ",",
+       "\[IndentingNewLine]", 
+      RowBox[{"PlotStyle", "\[Rule]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Directive", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"PointSize", "[", ".02", "]"}]}], "]"}], "&"}], "/@", 
+         RowBox[{"{", 
+          RowBox[{"Purple", ",", 
+           RowBox[{"Darker", "@", "Green"}], ",", "Orange", ",", "Cyan", ",", 
+           "Magenta", ",", "Blue", ",", "Red"}], "}"}]}], ")"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Epilog", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Circle", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", "1"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"1", "/", "#"}], ",", 
+               RowBox[{"1", "/", "#"}]}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"Sqrt", "[", "2", "]"}], "/", "#"}]}], "]"}], "&"}], "/@", 
+          RowBox[{"Table", "[", 
+           RowBox[{"i", ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", "2", ",", "d"}], "}"}]}], "]"}]}]}], "}"}]}]}],
+      "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.591963940934408*^9, 3.591963945647892*^9}, {
+   3.591963993385969*^9, 3.591964014028829*^9}, {3.591964078031584*^9, 
+   3.59196407819829*^9}, {3.591964369042596*^9, 3.591964415266898*^9}, {
+   3.591964446849853*^9, 3.5919644490302057`*^9}, {3.591964479923007*^9, 
+   3.591964526464109*^9}, {3.591964563094119*^9, 3.59196460129205*^9}, {
+   3.59196480933825*^9, 3.59196481026539*^9}, {3.591964959301597*^9, 
+   3.5919649893857203`*^9}, {3.591971918366474*^9, 3.5919719230448437`*^9}, 
+   3.5919720099489937`*^9, {3.598270632212364*^9, 3.598270637517062*^9}, {
+   3.5982708709926767`*^9, 3.598270875604724*^9}, 3.6022264631364613`*^9, {
+   3.602329914214657*^9, 3.602329922076723*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"T3", ",", "T4", ",", "T5", ",", "T6", ",", "T7", ",", "T8"}], 
+    "}"}], ",", "8"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5919720132471724`*^9, 3.591972040911696*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.6666666666666666, 0.}, {-0.12200846792814618`, 
+     0.21132486540518697`}, {0.4553418012614795, 0.7886751345948129}, {
+     0.6666666666666666, 0.}, {0.4553418012614795, 
+     0.7886751345948129}, {-0.12200846792814618`, 0.21132486540518697`}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{0.5, 0.}, {0., 0.}, {0., 0.5}, {0.5, 0.5}, {0.5, 0.}, {0., 
+     0.5}, {0.5, 0.}, {0., 0.5}, {0.5, 0.}, {0.5, 0.5}, {0., 0.5}, {0., 
+     0.}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQPWsmCNy0Z4ACvplBvHeCN9krBKmfXL1w1f4VG6vT
+vgds2X/1od/9Mufz9vGBT4L3vD9sz9JmUXx97T37e837hM6/vWMf9tll2iKW
+q/bo5qHrR1ePbh+6+ejmocuj60c3H91+dPPQ1aObj64f3T4AHmqdJg==
+     "]]}, 
+   {RGBColor[0, 1, 1], PointSize[0.02], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCQA2IQHQoGV+0ZoODYzPslG3l22x9RnJb9yXr9/gNQ+jBU
+HKYOpu/YXasPgSpn7fskTyy6bHMTTsPE0c1HNw9dP6Xq0d1HbXl0+9HdR6l6
+9PBD14/uPozwQYs/AD4ouB4=
+     "]]}, 
+   {RGBColor[1, 0, 1], PointSize[0.02], PointBox[CompressedData["
+1:eJxTTMoPSmViYGDQAmIQPUnFE4gu2TNAQUm9du2N4/vsb6RMW1y+dO3+iqoS
+B69Hc/YLnFy8T0hmkf2M6Zw7ftSu2M81jWvKosun7E3T+BV9azfbt4Z7rXwc
+cdW+YHWJ1SLWC/ZWOQFmnuJX7HU/7m67/PeqfVbnn6cxekft0e1DNx/dPHT9
+6O5Ddw+6/ej2oatHNx/dPejmoduP7l50+9Dl0fWjm49uP7r70N2Pbh+6eejq
+0e1HNx/dvejuQbcPXT+6/ejmobsH3Xx09wEAUW0x3Q==
+     "]]}, 
+   {RGBColor[0, 0, 1], PointSize[0.02], PointBox[CompressedData["
+1:eJxTTMoPSmViYGCwAGIQDQEX7BlQwAF7g/d/ZlY2rdrPgAZQxQ+g6YOZc8D+
+2Vx7Y/+Ay/ao4hfQxA+gyRMCFzDMo7Z+7P5DV4crfHD5Dx3gCh9C7qWXPLr7
+EAC//3CFD8Ie/OFLyF2E/EG5fvzpE1f6RpiDP3/AACJ8ALCkgh4=
+     "]]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {
+     CircleBox[
+      NCache[{
+        Rational[1, 2], 
+        Rational[1, 2]}, {0.5, 0.5}], 
+      NCache[2^Rational[-1, 2], 0.7071067811865475]], 
+     CircleBox[
+      NCache[{
+        Rational[1, 3], 
+        Rational[1, 3]}, {0.3333333333333333, 0.3333333333333333}], 
+      NCache[Rational[1, 3] 2^Rational[1, 2], 0.4714045207910317]], 
+     CircleBox[
+      NCache[{
+        Rational[1, 4], 
+        Rational[1, 4]}, {0.25, 0.25}], 
+      NCache[Rational[1, 2] 2^Rational[-1, 2], 0.35355339059327373`]], 
+     CircleBox[
+      NCache[{
+        Rational[1, 5], 
+        Rational[1, 5]}, {0.2, 0.2}], 
+      NCache[Rational[1, 5] 2^Rational[1, 2], 0.28284271247461906`]], 
+     CircleBox[
+      NCache[{
+        Rational[1, 6], 
+        Rational[1, 6]}, {0.16666666666666666`, 0.16666666666666666`}], 
+      NCache[Rational[1, 3] 2^Rational[-1, 2], 0.2357022603955158]], 
+     CircleBox[
+      NCache[{
+        Rational[1, 7], 
+        Rational[1, 7]}, {0.14285714285714285`, 0.14285714285714285`}], 
+      NCache[Rational[1, 7] 2^Rational[1, 2], 0.20203050891044216`]], 
+     CircleBox[
+      NCache[{
+        Rational[1, 8], 
+        Rational[1, 8]}, {0.125, 0.125}], 
+      NCache[Rational[1, 4] 2^Rational[-1, 2], 0.17677669529663687`]]}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  ImageSize->{799., Automatic},
+  PlotRange->{{-1.2, 1.2}, {-1.2, 1.2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{3.5919720429608727`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", "/", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "9"}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "3"}], ")"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "18"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"I", " ", 
+          RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], "}"}]}], "}"}], ",", 
+   "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6017261137998037`*^9, 3.601726122086192*^9}, {
+  3.6017261670918007`*^9, 3.60172620621172*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.2222222222222222, 0.}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, 0.09622504486493763}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, -0.09622504486493763}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{3.6017262813688183`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "9"}], ")"}]}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"2", "/", "3"}], ")"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "9"}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"2", "/", "9"}], ")"}]}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "3"}], ")"}]}]}], "}"}]}], "}"}], ",", "0"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.601726130409734*^9, 3.601726145172718*^9}, {
+  3.601726209460738*^9, 3.6017262205633783`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, -0.09622504486493763}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, 0.}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, -0.19245008972987526`}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{3.601726470256184*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "18"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"I", " ", 
+          RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "9"}], " ", "I", " ", 
+       RowBox[{"(", 
+        RowBox[{"I", "+", 
+         RowBox[{"Sqrt", "[", "3", "]"}]}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "9"}], ")"}]}], "}"}]}], "}"}], ",", "0"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.601726149218975*^9, 3.601726150074284*^9}, {
+  3.601726223517469*^9, 3.601726239780292*^9}, {3.601726482362974*^9, 
+  3.6017264840412197`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, 0.09622504486493763}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, 0.19245008972987526`}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, 0.}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{{3.601726473293195*^9, 3.601726484844989*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2", "/", "9"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "18"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", 
+         RowBox[{"I", " ", 
+          RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "9"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"-", "1"}], ")"}], "^", 
+          RowBox[{"(", 
+           RowBox[{"2", "/", "3"}], ")"}]}]}], ")"}]}], "}"}]}], "}"}], ",", 
+   "0"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6017261532041597`*^9, 3.601726153750711*^9}, {
+  3.601726225115046*^9, 3.6017262477548027`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.2222222222222222, 0.}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, -0.09622504486493763}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, 0.09622504486493763}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{3.601726533760624*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "9"}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "3"}], ")"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "9"}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"2", "/", "9"}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"2", "/", "3"}], ")"}]}]}], "}"}]}], "}"}], ",", "0"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.601726156579008*^9, 3.601726157117384*^9}, {
+  3.601726226423814*^9, 3.601726258605229*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, 0.09622504486493763}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, 0.}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, 0.19245008972987526`}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{3.601726536355123*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "9"}], ")"}]}], " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "1"}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"2", "/", "3"}], ")"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "9"}], ")"}]}], " ", "I", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "I"}], "+", 
+         RowBox[{"Sqrt", "[", "3", "]"}]}], ")"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{"1", "/", "9"}], ")"}]}], "}"}]}], "}"}], ",", "0"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.601726160131662*^9, 3.60172616095234*^9}, {
+  3.6017262279079638`*^9, 3.601726228833897*^9}, {3.601726261030841*^9, 
+  3.601726267004932*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], 
+    PointBox[{{0.05555555555555555, -0.09622504486493763}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, -0.19245008972987526`}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], 
+    PointBox[{{-0.1111111111111111, 0.}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{3.601726538633226*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ComplexPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", "/", "8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "16"}], "+", 
+       RowBox[{"I", "/", "16"}]}], "}"}], ",", 
+     RowBox[{"{", "0", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "16"}], "-", 
+       RowBox[{"I", "/", "16"}]}], "}"}]}], "}"}], ",", "0"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.6018102991183767`*^9, 3.601810302526514*^9}, {
+  3.601810374421208*^9, 3.601810406154862*^9}, {3.601810442640009*^9, 
+  3.601810460900071*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.5, 0, 0.5], PointSize[0.02], PointBox[{{0.125, 0.}}]}, 
+   {RGBColor[0, 
+     NCache[
+      Rational[2, 3], 0.6666666666666666], 0], PointSize[0.02], 
+    PointBox[{{0.0625, 0.0625}}]}, 
+   {RGBColor[1, 0.5, 0], PointSize[0.02], PointBox[{{0., 0.}}]}, 
+   {RGBColor[0, 1, 1], PointSize[0.02], PointBox[{{0.0625, -0.0625}}]}},
+  AspectRatio->1,
+  Axes->True,
+  AxesOrigin->{0, 0},
+  Epilog->{
+    CircleBox[{0, 0}, 1], {}},
+  Frame->True,
+  FrameLabel->{{
+     FormBox["Im", TraditionalForm], None}, {
+     FormBox["Re", TraditionalForm], 
+     FormBox["\"complex plane\"", TraditionalForm]}},
+  ImagePadding->40,
+  ImageSize->{513., Automatic},
+  PlotRange->{{-2, 2}, {-2, 2}},
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{{3.601810379051115*^9, 3.601810407642345*^9}, 
+   3.601810462026206*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Row", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"ComplexPlot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"2", "/", "9"}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"2", " ", "I"}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"9", " ", "I"}], "+", 
+           RowBox[{"9", " ", 
+            RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], ",", 
+        RowBox[{
+         RowBox[{"1", "/", "18"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"I", " ", 
+            RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"2", " ", "I"}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"9", " ", "I"}], "-", 
+           RowBox[{"9", " ", 
+            RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], ",", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{"1", "/", "9"}], ")"}]}], ",", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{"4", "/", 
+           RowBox[{"(", 
+            RowBox[{"9", "-", 
+             RowBox[{"9", " ", "I", " ", 
+              RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], ")"}]}], ",", 
+        RowBox[{
+         RowBox[{"1", "/", "18"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "+", 
+           RowBox[{"I", " ", 
+            RowBox[{"Sqrt", "[", "3", "]"}]}]}], ")"}]}], ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"3", " ", "I"}], "+", 
+             RowBox[{"Sqrt", "[", "3", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{"9", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "3"}], " ", "I"}], "+", 
+             RowBox[{"Sqrt", "[", "3", "]"}]}], ")"}]}], ")"}]}], ",", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{"1", "/", "9"}], ")"}]}]}], "}"}], ",", "0"}], "]"}], ",", 
+    RowBox[{"ComplexPlot", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "/", "8"}], ",", 
+        RowBox[{
+         RowBox[{"1", "/", "16"}], "+", 
+         RowBox[{"I", "/", "16"}]}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"1", "/", "16"}], "-", 
+         RowBox[{"I", "/", "16"}]}], ",", 
+        RowBox[{
+         RowBox[{"1", "/", "16"}], "-", 
+         RowBox[{"I", "/", "16"}]}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"1", "/", "16"}], ")"}]}], "-", 
+         RowBox[{"I", "/", "16"}]}], ",", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{"I", "/", "8"}], ")"}]}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"1", "/", "16"}], ")"}]}], "+", 
+         RowBox[{"I", "/", "16"}]}], ",", 
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{"1", "/", "8"}], ")"}]}], ",", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"1", "/", "16"}], ")"}]}], "-", 
+         RowBox[{"I", "/", "16"}]}], ",", 
+        RowBox[{
+         RowBox[{"1", "/", "16"}], "+", 
+         RowBox[{"I", "/", "16"}]}], ",", 
+        RowBox[{"I", "/", "8"}], ",", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{"1", "/", "16"}], ")"}]}], "+", 
+         RowBox[{"I", "/", "16"}]}], ",", "0"}], "}"}], ",", "0"}], "]"}]}], 
+   "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.60222643174265*^9, 3.602226538585874*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<Transform2.pdf\>\"", ",", 
+    TemplateBox[{GraphicsBox[{
+        RGBColor[1, 0, 0], 
+        PointSize[0.02], 
+        PointBox[{{0.2222222222222222, 0.}, {0.05555555555555555, 
+         0.09622504486493763}, {0.05555555555555555, -0.09622504486493763}, {
+         0.05555555555555555, -0.09622504486493763}, {-0.1111111111111111, 
+         0.}, {-0.1111111111111111, -0.19245008972987526`}, {
+         0.05555555555555555, 0.09622504486493763}, {-0.1111111111111111, 
+         0.19245008972987526`}, {-0.1111111111111111, 0.}}]}, AspectRatio -> 
+       1, Axes -> True, AxesOrigin -> {0, 0}, Epilog -> {
+         CircleBox[{0, 0}, 1], {}}, Frame -> True, FrameLabel -> {{
+          FormBox["Im", TraditionalForm], None}, {
+          FormBox["Re", TraditionalForm], 
+          FormBox["\"complex plane\"", TraditionalForm]}}, ImagePadding -> 40,
+        ImageSize -> {254., Automatic}, 
+       PlotRange -> {{-1.2, 1.2}, {-1.2, 1.2}}, PlotRangeClipping -> True],
+      GraphicsBox[{
+        RGBColor[1, 0, 0], 
+        PointSize[0.02], 
+        PointBox[{{0.125, 0.}, {0.0625, 0.0625}, {0., 0.}, {
+         0.0625, -0.0625}, {0.0625, -0.0625}, {0., 0.}, {-0.0625, -0.0625}, {
+         0., -0.125}, {0., 0.}, {-0.0625, 0.0625}, {-0.125, 
+         0.}, {-0.0625, -0.0625}, {0.0625, 0.0625}, {0., 0.125}, {-0.0625, 
+         0.0625}, {0., 0.}}]}, AspectRatio -> 1, Axes -> True, 
+       AxesOrigin -> {0, 0}, Epilog -> {
+         CircleBox[{0, 0}, 1], {}}, Frame -> True, FrameLabel -> {{
+          FormBox["Im", TraditionalForm], None}, {
+          FormBox["Re", TraditionalForm], 
+          FormBox["\"complex plane\"", TraditionalForm]}}, ImagePadding -> 40,
+        ImageSize -> {256., Automatic}, 
+       PlotRange -> {{-1.2, 1.2}, {-1.2, 1.2}}, PlotRangeClipping -> True]},
+     "Row",
+     DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+     InterpretationFunction->(RowBox[{"Row", "[", 
+        RowBox[{"{", 
+          RowBox[{#, ",", #2}], "}"}], "]"}]& )]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6023299643863783`*^9, 3.6023299827964153`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<Transform.pdf\>\"", ",", 
+    TemplateBox[{GraphicsBox[{
+        RGBColor[1, 0, 0], 
+        PointSize[0.02], 
+        PointBox[{{0.2222222222222222, 0.}, {0.05555555555555555, 
+         0.09622504486493763}, {0.05555555555555555, -0.09622504486493763}, {
+         0.05555555555555555, -0.09622504486493763}, {-0.1111111111111111, 
+         0.}, {-0.1111111111111111, -0.19245008972987526`}, {
+         0.05555555555555555, 0.09622504486493763}, {-0.1111111111111111, 
+         0.19245008972987526`}, {-0.1111111111111111, 0.}}]}, AspectRatio -> 
+       1, Axes -> True, AxesOrigin -> {0, 0}, Epilog -> {
+         CircleBox[{0, 0}, 1], {}}, Frame -> True, FrameLabel -> {{
+          FormBox["Im", TraditionalForm], None}, {
+          FormBox["Re", TraditionalForm], 
+          FormBox["\"complex plane\"", TraditionalForm]}}, ImagePadding -> 40,
+        ImageSize -> {362., Automatic}, PlotRange -> {{-2, 2}, {-2, 2}}, 
+       PlotRangeClipping -> True],GraphicsBox[{
+        RGBColor[1, 0, 0], 
+        PointSize[0.02], 
+        PointBox[{{0.125, 0.}, {0.0625, 0.0625}, {0., 0.}, {
+         0.0625, -0.0625}, {0.0625, -0.0625}, {0., 0.}, {-0.0625, -0.0625}, {
+         0., -0.125}, {0., 0.}, {-0.0625, 0.0625}, {-0.125, 
+         0.}, {-0.0625, -0.0625}, {0.0625, 0.0625}, {0., 0.125}, {-0.0625, 
+         0.0625}, {0., 0.}}]}, AspectRatio -> 1, Axes -> True, 
+       AxesOrigin -> {0, 0}, Epilog -> {
+         CircleBox[{0, 0}, 1], {}}, Frame -> True, FrameLabel -> {{
+          FormBox["Im", TraditionalForm], None}, {
+          FormBox["Re", TraditionalForm], 
+          FormBox["\"complex plane\"", TraditionalForm]}}, ImagePadding -> 40,
+        ImageSize -> {359., Automatic}, PlotRange -> {{-2, 2}, {-2, 2}}, 
+       PlotRangeClipping -> True]},
+     "Row",
+     DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", #2}]& ),
+     InterpretationFunction->(RowBox[{"Row", "[", 
+        RowBox[{"{", 
+          RowBox[{#, ",", #2}], "}"}], "]"}]& )]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6022265566290617`*^9, 3.602226580966457*^9}}]
+},
+WindowSize->{1914, 1148},
+WindowMargins->{{-7, Automatic}, {-7, Automatic}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (February 23, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 18367, 513, 812, "Input"],
+Cell[CellGroupData[{
+Cell[18949, 537, 255, 6, 30, "Input"],
+Cell[19207, 545, 3398, 84, 814, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22642, 634, 751, 24, 30, "Input"],
+Cell[23396, 660, 783, 23, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24216, 688, 923, 31, 30, "Input"],
+Cell[25142, 721, 784, 23, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25963, 749, 814, 25, 30, "Input"],
+Cell[26780, 776, 806, 23, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27623, 804, 819, 26, 30, "Input"],
+Cell[28445, 832, 781, 23, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29263, 860, 813, 27, 30, "Input"],
+Cell[30079, 889, 782, 23, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30898, 917, 960, 31, 30, "Input"],
+Cell[31861, 950, 784, 23, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32682, 978, 625, 19, 30, "Input"],
+Cell[33310, 999, 852, 24, 528, "Output"]
+}, Open  ]],
+Cell[34177, 1026, 3611, 109, 50, "Input"],
+Cell[37791, 1137, 2138, 40, 273, InheritFromParent],
+Cell[39932, 1179, 2112, 39, 379, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
